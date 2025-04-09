@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SESI Lanches - Lanchonete Escolar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra de Navegação -->
+    <header>
+        <nav>
+            <div class="logo">SESI Lanches</div>
+            <div class="menu-toggle">☰</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#cardapio">Cardápio</a></li>
+                <li><a href="#pedidos">Meu Pedido</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Corpo Principal -->
+    <main class="container">
+        <!-- Seção Hero -->
+        <section id="inicio" class="hero">
+            <h1>Bem-vindo à SESI Lanches</h1>
+            <p>A lanchonete oficial da sua escola, oferecendo lanches rápidos e saborosos para seu dia de estudos.</p>
+        </section>
+
+        <!-- Seção de Cardápio -->
+        <section id="cardapio" class="menu-section">
+            <h2 class="section-title">Nosso Cardápio</h2>
+            
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="all">Todos</button>
+                <button class="category-btn" data-category="lanches">Lanches</button>
+                <button class="category-btn" data-category="salgados">Salgados</button>
+                <button class="category-btn" data-category="bebidas">Bebidas</button>
+                <button class="category-btn" data-category="combos">Combos</button>
+            </div>
+            
+            <div class="menu-items" id="menu-items-container">
+                <!-- Itens serão carregados via JavaScript -->
+            </div>
+        </section>
+
+        <!-- Seção de Pedidos -->
+        <section id="pedidos" class="order-section">
+            <h2 class="section-title">Meu Pedido</h2>
+            
+            <div class="order-items" id="order-items-container">
+                <p id="empty-order-message">Seu pedido está vazio. Adicione itens do cardápio.</p>
+            </div>
+            
+            <div class="order-total" id="order-total">
+                Total: R$ 0,00
+            </div>
+            
+            <input type="text" class="student-name" id="student-name" placeholder="Digite seu nome completo" required>
+            <button class="reserve-btn" id="reserve-btn">Reservar Pedido</button>
+            <button class="checkout-btn" id="checkout-btn">Finalizar Pedido</button>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer id="contato">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SESI Lanches</h3>
+                <p>A lanchonete oficial do SESI, oferecendo lanches rápidos e nutritivos.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Horário de Funcionamento</h3>
+                <p>Segunda a Sexta</p>
+                <p>08:00 - 21:00</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>lanches@sesi.com.br</p>
+                <p>(XX) XXXX-XXXX</p>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2023 SESI Lanches. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Modal de Confirmação -->
+    <div class="modal" id="confirmation-modal">
+        <div class="modal-content">
+            <h3 id="modal-title">Pedido Confirmado!</h3>
+            <p id="modal-message">Seu pedido foi reservado com sucesso.</p>
+            <button class="close-modal" id="close-modal">Fechar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
